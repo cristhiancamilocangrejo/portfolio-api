@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Main Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+                $( "#resizable" ).resizable();
+
+                $.get("http://127.0.0.1:8080/portfolio-web-app/v1/portfolio/1", function(data, status){
+                    console.log(data);
+
+                    $("img").attr("src",data.imageUrl)
+                    $("#description").text(data.description)
+                    $("#twitterUserName").text(data.twitterUserName)
+                    $("#title").text(data.title)
+
+                    var arrayLength = data.tweetList.length;
+                    for (var i = 0; i < arrayLength; i++) {
+                        $("#tweets").append($("<li>").text(data.tweetList[i].text + ". Published:" +data.tweetList[i].creationDate));
+                    }
+                });
+        });
+    </script>
+</head>
+<body>
+
+<div id="resizable" class="ui-widget-content">
+    <h3 class="ui-widget-header">Portfolio simple web page</h3>
+    <img alt="W3Schools.com">
+    <br/>
+    <p><b>Twitter user name: </b></p>
+    <p id="twitterUserName"/>
+    <br/>
+    <p><b>Title: </b></p>
+    <p id="title"/>
+    <br/>
+    <p><b>Description: </b></p>
+    <p id="description"/>
+    <br/>
+    <p><b>Tweets: </b></p>
+    <ul id="tweets" />
+</div>
+
+
+
+
+
+
+</body>
+</html>

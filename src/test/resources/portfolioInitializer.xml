@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <PORTFOLIO
+            idportfolio="1"
+            description="Soccer F Player"
+            image_url="https://pbs.twimg.com/profile_images/1117967801652617216/i8PWXebo_400x400.jpg"
+            twitter_user_name="PibeValderramap"
+            title="Calos Valderrama"
+    />
+
+    <PORTFOLIO
+            idportfolio="2"
+            description="The Mother of Dragons!!"
+            image_url="https://pbs.twimg.com/profile_images/1117967801652617216/i8PWXebo_400x400.jpg"
+            twitter_user_name="Daenerys"
+            title="Daenerys Targaryen"
+    />
+
+    <PORTFOLIO
+            idportfolio="3"
+            description="Soccer F Player"
+            image_url="Tyrion of House Lannister. Imp, Halfman. Never forget what you are, for surely the world will not"
+            twitter_user_name="GoT_Tyrion"
+            title="Tyrion Lanniste"
+    />
+</dataset>
